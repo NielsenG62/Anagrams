@@ -13,7 +13,7 @@
 
 ## Description
 
-_When you run this application from the terminal, you will get two prompts. The app will then test the strings to see if they are made up of the same letters without being the exact same word. If they are not anagrams, the app will check to see if the strings share any letters. If they have no letters in common they are antigrams. Each unique test result will display an ascii animal along with the message._
+_When you run this application from the terminal, you will get two prompts. The app will then test the strings to see if they are made up of the same letters without being the exact same word. If they are not anagrams, the app will check to see if the strings share any letters. It will also tell the user if one of the words is a palindrome. If they have no letters in common they are antigrams. Each unique test result will display an ascii animal along with the message._
 
 ## Setup/Installation Requirements
 
