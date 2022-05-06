@@ -36,12 +36,13 @@ end
 describe('#letter_match') do
   it('should get a breakdown of letters in the both words') do
     string = Anagram.new('hill', 'leek')
-    expect(string.letter_match).to(eq("H:1 I:1 L:2 \nL:1 E:2 K:1 "))
+    expect(string.letter_match).to(eq("H:1 I:1 L:2 \nE:2 K:1 L:1 "))
   end
 end
 
 describe('#is_palindrome?') do
-  it('should return false if no word is a palindrome')
-  string = Anagram.new('hill', 'leek')
-  expect(string.is_palindrome?).to(eq(false))
+  it('should return false if no word is a palindrome') do
+    string = Anagram.new('hill', 'leek')
+    expect(string.is_palindrome?).to(eq(false))
+  end
 end

@@ -51,4 +51,8 @@ class Anagram
     end
     "#{output1}\n#{output2}"
   end
+
+  def is_palindrome?
+    (@string1.reverse == @string1) || (@string2.reverse ==@string2)
+  end
 end
