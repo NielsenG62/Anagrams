@@ -31,17 +31,18 @@ class Anagram
     output
   end
 
+  # This function turned itself into basically the same function as is_anagram, just without the logic for the different results
   def letter_match
     output1 = ''
     output2 = ''
-    string_array1 = @string1.upcase.chars
+    string_array1 = @string1.upcase.chars.sort
     string_array1.each do |letter|
       count = (@string1.upcase.count letter).to_s
       if !output1.include? letter
       output1 += "#{letter}:#{count} "
       end
     end
-    string_array2 = @string2.upcase.chars
+    string_array2 = @string2.upcase.chars.sort
     string_array2.each do |letter|
       count = (@string2.upcase.count letter).to_s
       if !output2.include? letter

@@ -19,6 +19,7 @@ if output.include? 'These words are not anagrams'
    /`"""`\
   /       \
   HEREDOC
+
 elsif output == 'Invalid input. Words must contain vowels.'
   puts <<-'HEREDOC'
    ,-.       _,---._ __  / \
@@ -33,7 +34,7 @@ elsif output == 'Invalid input. Words must contain vowels.'
    )  |  \  `.___________|/
    `--'   `--'
   HEREDOC
-elsif output == 'No letters in these words match, making them antigrams'
+elsif output == 'Please put two different strings'
   puts <<-'HEREDOC'
         __  _
     .-.'  `; `-._  __  _
@@ -46,6 +47,30 @@ elsif output == 'No letters in these words match, making them antigrams'
                   |||  |||  
 
   HEREDOC
+elsif output == 'No letters in these words match, making them antigrams'
+  puts <<-'HEREDOC'
+               |       :     . |
+             | '  :      '   |
+             |  .  |   '  |  |
+   .--._ _...:.._ _.--. ,  ' |
+  (  ,  `        `  ,  )   . |
+   '-/              \-'  |   |
+     |  o   /\   o  |       :|
+     \     _\/_     / :  '   |
+     /'._   ^^   _.;___      |
+   /`    `""""""`      `\=   |
+ /`                     /=  .|
+;             '--,-----'=    |
+|                 `\  |    . |
+\                   \___ :   |
+/'.                     `\=  |
+\_/`--......_            /=  |
+            |`-.        /= : |
+            | : `-.__ /` .   |
+            |    .   ` |    '|
+            |  .  : `   . |  |
+  HEREDOC
+
 else
   puts <<-'HEREDOC'
         .
@@ -56,4 +81,5 @@ else
 ~^~^~^~^~^~^~^~^~^~^~^~^~
   HEREDOC
 end
+puts check.letter_match
 puts output
