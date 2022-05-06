@@ -39,3 +39,9 @@ describe('#letter_match') do
     expect(string.letter_match).to(eq("H:1 I:1 L:2 \nL:1 E:2 K:1 "))
   end
 end
+
+describe('#is_palindrome?') do
+  it('should return false if no word is a palindrome')
+  string = Anagram.new('hill', 'leek')
+  expect(string.is_palindrome?).to(eq(false))
+end
