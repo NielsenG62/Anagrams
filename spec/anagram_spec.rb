@@ -7,6 +7,10 @@ describe('#is_anagram') do
     string = Anagram.new('now', 'won')
     expect(string.is_anagram).to(eq('These words are anagrams'))
   end
+  it('should know if two words are not anagrams') do
+    string = Anagram.new('now', 'far')
+    expect(string.is_anagram).to(eq('These words are not anagrams'))
+  end
   it('should be not case sensitive') do
     string = Anagram.new('Now', 'Won')
     expect(string.is_anagram).to(eq('These words are anagrams'))
