@@ -1,6 +1,6 @@
 require('pry')
 require('rspec')
-require('coins')
+require('anagram')
 
 describe('#anagram_check') do 
   it('should know if two words are anagrams') do
