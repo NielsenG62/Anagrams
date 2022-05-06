@@ -6,6 +6,10 @@ class Anagram
 
   def is_anagram
     output = ''
+    if @string1 == @string2
+      output = 'Please put two different strings'
+      return output
+    end
     sort_string1 = @string1.downcase.chars.sort
     sort_string1.delete_if {|letter| !('a'..'z').include?(letter)}
     sort_string2 = @string2.downcase.chars.sort
