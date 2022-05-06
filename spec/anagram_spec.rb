@@ -23,4 +23,8 @@ describe('#is_anagram') do
     string = Anagram.new('Clint Eastwood', 'old west action')
     expect(string.is_anagram).to(eq("These words are anagrams"))
   end
+  it('should not allow the same word or phrase twice') do
+    string = Anagram.new('bark', 'bark')
+    expect(string.is_anagram).to(eq("Please put two different strings"))
+  end
 end
