@@ -8,10 +8,14 @@ class Anagram
     output = ''
     sort_string1 = @string1.downcase.chars.sort
     sort_string2 = @string2.downcase.chars.sort
-    if sort_string1 == sort_string2
-      output = 'These words are anagrams'
+    if (@string1.count 'aeiou' > 0) && (@string2.count 'aeiou' > 0)
+      if sort_string1 == sort_string2
+        output = 'These words are anagrams'
+      else
+        output = 'These words are not anagrams'
+      end
     else
-      output = 'These words are not anagrams'
+      output = "Invalid input. Words must contain vowels."
     end
     output
   end
