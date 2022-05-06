@@ -19,4 +19,8 @@ describe('#is_anagram') do
     string = Anagram.new('howdy', 'place')
     expect(string.is_anagram).to(eq("No letters in these words match, making them antigrams"))
   end
+  it('should check sentences for antigrams') do
+    string = Anagram.new('Clint Eastwood', 'old west action')
+    expect(string.is_anagram).to(eq("These words are anagrams"))
+  end
 end
