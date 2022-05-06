@@ -34,4 +34,8 @@ describe('#letter_match') do
     string = Anagram.new('hill', 'leek')
     expect(string.letter_match).to(eq("H:1 I:1 L:2 \nL:1 E:2 K:1 "))
   end
+  it('should compare the vales for similarities') do
+    string = Anagram.new('bark', 'stark')
+    expect(string.letter_match).to(eq("A:1 R:1 K:1"))
+  end
 end
