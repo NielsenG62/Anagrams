@@ -1,5 +1,4 @@
 #!/usr/bin/ruby
-
 require_relative('lib/anagram.rb')
 
 puts 'Anagram Checker:'
