@@ -31,14 +31,22 @@ class Anagram
   end
 
   def letter_match
-    output = ''
-    string_array = @string1.upcase.chars
-    string_array.each do |letter|
+    output1 = ''
+    output2 = ''
+    string_array1 = @string1.upcase.chars
+    string_array1.each do |letter|
       count = (@string1.upcase.count letter).to_s
-      if !output.include? letter
-      output += "#{letter}:#{count}, "
+      if !output1.include? letter
+      output1 += "#{letter}:#{count} "
       end
     end
-    output
+    string_array2 = @string2.upcase.chars
+    string_array2.each do |letter|
+      count = (@string2.upcase.count letter).to_s
+      if !output2.include? letter
+      output2 += "#{letter}:#{count} "
+      end
+    end
+    "#{output1}\n#{output2}"
   end
 end
