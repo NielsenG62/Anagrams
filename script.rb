@@ -49,7 +49,7 @@ elsif output == 'Please put two different strings'
   HEREDOC
 elsif output == 'No letters in these words match, making them antigrams'
   puts <<-'HEREDOC'
-               |       :     . |
+             |       :     . |
              | '  :      '   |
              |  .  |   '  |  |
    .--._ _...:.._ _.--. ,  ' |
@@ -80,6 +80,9 @@ else
   |  O        \___/  |
 ~^~^~^~^~^~^~^~^~^~^~^~^~
   HEREDOC
+end
+if check.is_palindrome?
+  puts 'One of your words is a palindrome!'
 end
 puts check.letter_match
 puts output
