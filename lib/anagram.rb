@@ -29,4 +29,16 @@ class Anagram
     end
     output
   end
+
+  def letter_match
+    output = ''
+    string_array = @string1.upcase.chars
+    string_array.each do |letter|
+      count = (@string1.upcase.count letter).to_s
+      if !output.include? letter
+      output += "#{letter}:#{count}, "
+      end
+    end
+    output
+  end
 end
