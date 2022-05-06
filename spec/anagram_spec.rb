@@ -8,8 +8,8 @@ describe('#is_anagram') do
     expect(string.is_anagram).to(eq('These words are anagrams'))
   end
   it('should know if two words are not anagrams') do
-    string = Anagram.new('now', 'far')
-    expect(string.is_anagram).to(eq('These words are not anagrams'))
+    string = Anagram.new('bark', 'stark')
+    expect(string.is_anagram).to(eq('These words are not anagrams, but these letters match: a, k, r'))
   end
   it('should be not case sensitive') do
     string = Anagram.new('Now', 'Won')
@@ -37,9 +37,5 @@ describe('#letter_match') do
   it('should get a breakdown of letters in the both words') do
     string = Anagram.new('hill', 'leek')
     expect(string.letter_match).to(eq("H:1 I:1 L:2 \nL:1 E:2 K:1 "))
-  end
-  it('should compare the vales for similarities') do
-    string = Anagram.new('bark', 'stark')
-    expect(string.letter_match).to(eq("A:1 R:1 K:1"))
   end
 end
