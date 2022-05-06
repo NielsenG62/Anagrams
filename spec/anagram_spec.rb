@@ -11,11 +11,8 @@ describe('#is_anagram') do
     string = Anagram.new('Now', 'Won')
     expect(string.is_anagram).to(eq('These words are anagrams'))
   end
-end
-
-describe('#is_word') do
   it('should make sure the words contain a vowel') do
     string = Anagram.new('hjkl', 'lkjh')
-    expect(string.is_anagram).to(eq("Invalid input. These words muxt contain vowels: 'hjkl', 'lkjh'"))
+    expect(string.is_anagram).to(eq("Invalid input. Words must contain vowels."))
   end
 end
