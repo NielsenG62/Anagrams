@@ -12,7 +12,11 @@ class Anagram
       if sort_string1 == sort_string2
         output = 'These words are anagrams'
       else
-        output = 'These words are not anagrams'
+        if (@string1.count @string2) == 0
+          output = 'No letters in these words match, making them antigrams'
+        else
+          output = 'These words are not anagrams'
+        end
       end
     else
       output = "Invalid input. Words must contain vowels."
