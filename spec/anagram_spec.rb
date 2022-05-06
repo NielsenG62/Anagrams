@@ -32,6 +32,6 @@ end
 describe('#letter_match') do
   it('should get a breakdown of letters in the word') do
     string = Anagram.new('hill', 'leek')
-    expect(string.letter_match).to(eq("H:4, I:1, L:2"))
+    expect(string.letter_match).to(eq("H:1, I:1, L:2"))
   end
 end
