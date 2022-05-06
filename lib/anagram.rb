@@ -7,7 +7,9 @@ class Anagram
   def is_anagram
     output = ''
     sort_string1 = @string1.downcase.chars.sort
+    sort_string1.delete_if {|letter| !('a'..'z').include?(letter)}
     sort_string2 = @string2.downcase.chars.sort
+    sort_string2.delete_if {|letter| !('a'..'z').include?(letter)}
     if ((@string1.count 'aeiou') > 0) && ((@string2.count 'aeiou') > 0)
       if sort_string1 == sort_string2
         output = 'These words are anagrams'
