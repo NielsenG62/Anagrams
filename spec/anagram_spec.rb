@@ -45,4 +45,8 @@ describe('#is_palindrome?') do
     string = Anagram.new('hill', 'leek')
     expect(string.is_palindrome?).to(eq(false))
   end
+  it('should return true if a word is a palindrome') do
+    string = Anagram.new('hill', 'hannah')
+    expect(string.is_palindrome?).to(eq(true))
+  end
 end
