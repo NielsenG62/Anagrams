@@ -21,7 +21,8 @@ class Anagram
         if (@string1.count @string2) == 0
           output = 'No letters in these words match, making them antigrams'
         else
-          output = 'These words are not anagrams'
+          same = (sort_string1 & sort_string2).join(', ')
+          output = "These words are not anagrams, but these letters match: #{same}"
         end
       end
     else
