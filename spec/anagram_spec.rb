@@ -15,4 +15,8 @@ describe('#is_anagram') do
     string = Anagram.new('hjkl', 'lkjh')
     expect(string.is_anagram).to(eq("Invalid input. Words must contain vowels."))
   end
+  it('should check strings for antigrams') do
+    string = Anagram.new('howdy', 'earth')
+    expect(string.is_anagram).to(eq("No letters in these words match, making them antigrams"))
+  end
 end
