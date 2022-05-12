@@ -23,9 +23,13 @@ describe('#is_anagram') do
     string = Anagram.new('howdy', 'place')
     expect(string.is_anagram).to(eq("No letters in these words match, making them antigrams"))
   end
-  it('should check sentences for antigrams') do
+  it('should check sentences for anagrams') do
     string = Anagram.new('Clint Eastwood', 'old west action')
     expect(string.is_anagram).to(eq("These words are anagrams"))
+  end
+  it('should check sentences for antigrams') do
+    string = Anagram.new('hi hi hi', 'bye bye')
+    expect(string.is_anagram).to(eq("No letters in these words match, making them antigrams"))
   end
   it('should not allow the same word or phrase twice') do
     string = Anagram.new('bark', 'bark')
