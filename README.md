@@ -20,6 +20,8 @@ _When you run this application from the terminal, you will get two prompts. The 
 - _Clone this repository_
 - _Make sure that your Ruby version is 2.6.X_
 - _Navigate to the root directory in the terminal_
+- _Run `Bundle install`_
+- _To see test results, run `rspec`_
 - _Run `ruby script.rb`_
 - _Answer the prompts given to you_
 
