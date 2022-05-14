@@ -18,10 +18,10 @@ class Anagram
       if sort_string1 == sort_string2
         output = 'These words are anagrams'
       else
-        if (@string1.count @string2) == 0
+        same = (sort_string1 & sort_string2).join(', ')
+        if same == ""
           output = 'No letters in these words match, making them antigrams'
         else
-          same = (sort_string1 & sort_string2).join(', ')
           output = "These words are not anagrams, but these letters match: #{same}"
         end
       end
